@@ -7,7 +7,8 @@ myButton.addEventListener('click', () => {
 
     axios.get('/cats')
     .then((res)=>{
-        let catName = res.date
+        let catName = res.data
+        myDiv.innerHTML = '';
         let newP = document.createElement('p')
         newP.innerHTML = catName
         myDiv.appendChild(newP)
